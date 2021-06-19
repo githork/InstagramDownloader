@@ -1,0 +1,32 @@
+body {
+    color: lightgrey;
+    background-color: #181818;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#preface{
+    text-align:right;
+    font-style: italic;
+}
+
+#presentation{
+    text-align:center;
+    font-weight:bold;
+    font-size:xx-large;
+}
+
+#mainbody {
+    text-align: center;
+}
+
+#stop {
+    text-align: center;
+}
