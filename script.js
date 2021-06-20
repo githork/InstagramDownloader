@@ -1,10 +1,17 @@
 function btnCliked()
 {
   var link = document.getElementById("inputlink").value;
-  redirection(link);
+  btnClicked2(link);
 }
 
+function btnClicked2(link)
+{
+  e.preventDefault();
+  increaseDownloadCountOnTheServer(location);
+  window.location.href=link;
+}
 
 function redirection(link){
-  document.location.href=link; 
+  document.location.href=link;
 }
+

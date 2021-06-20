@@ -27,6 +27,7 @@ h2 {
     text-align: center;
 }
 
-#stop {
+.stop {
     text-align: center;
+    font-style: italic;
 }

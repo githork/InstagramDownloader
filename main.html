@@ -8,7 +8,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="main.css" />
-		<link rel="stylesheet" href="fontawesome-all.min.css" />
 	</head>
 	<body>
 
@@ -31,26 +30,54 @@
 
 				<form>
 				<label for="inputlink"></label>
-  				<input type="text" id="inputlink" placeholder="Paste the link here" size="100" />
+  				<input type="text" id="text" placeholder="Paste the link here" size="100" />
 				<br>
-  				<input type="submit" onclick="btnCliked()" value="Download Picture" />
+				<input type="button" id="btn" value="Download Picture" />
 				<br>
-				<script type="text/javascript" src="script.js"></script>
+				<!--Script-->
+					<script>
+
+						function download(filename, textInput){
+							var element = document.createElement('a');
+							element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
+							element.setAttribute('download', filename);
+							document.body.appendChild(element);
+							element.click();
+							//document.body.removeChild(element);
+						}
+						document.getElementById("btn")
+							.addEventListener("click",function(){
+								var text = document.getElementById("text").value;
+								var filename = "output.txt";
+								var c = document.getElementById("idcheckbox").checked;
+								if (c.checked = false){
+								download(filename, text);
+								}
+								else
+								{
+									window.alert("Please check the box before downloading anything.");
+								}
+							}, false);
+					</script>
 
 				<label for="checkbox">By checking this box, you agree to download the image and use it in accordance with the laws.</label>
-				<input type="checkbox" name="checkbox" required="true">
+				<input type="checkbox" id="idcheckbox" name="checkbox" required>
 				</form>
 
 
+
+
+
+
 			</div>
-			<div id="stop">
+		<!--More informations-->
+			<div class="stop">
 				<br><br>
-				<h2>Some tips</h2>
-				<p id="stopp">This Instagram downloader is developped only for fun, not for a commercial use.<br><br>
+				<h2>More informations</h2>
+				<p>This Instagram downloader is developped only for fun, not for a commercial use.<br><br>
 				If an Instagram account is private, please respect and don't download any photos. <br>
 				As i said above, please respect and us images in accordance with the laws. <br>
 				Have a good use with this simple Instagram Downloader! </p>
-
 			</div>
 
 		
