@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <!--
 	Instagram downloader website by Khlemant
+	All rights reserved to Khlemant.
+	No commercial uses.
 -->
 <html>
 	<head>
@@ -10,6 +12,8 @@
 		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body>
+		<!--Background-->
+		<div class="backgroundImage" style="background-image: url('backgroud.jpg');">
 
 		<!-- Header -->
 			<header>
@@ -32,7 +36,7 @@
 				<label for="inputlink"></label>
   				<input type="text" id="text" placeholder="Paste the link here" size="100" />
 				<br>
-				<input type="button" id="btn" value="Download Picture" />
+				<input type="button" id="btn" value="Download" />
 				<br>
 				<!--Script-->
 					<script>
@@ -48,9 +52,9 @@
 						document.getElementById("btn")
 							.addEventListener("click",function(){
 								var text = document.getElementById("text").value;
-								var filename = "output.txt";
+								var filename = "output.html";
 								var c = document.getElementById("idcheckbox").checked;
-								if (c.checked = false){
+								if (c == true){
 								download(filename, text);
 								}
 								else
@@ -80,7 +84,7 @@
 				Have a good use with this simple Instagram Downloader! </p>
 			</div>
 
-		
+		</div>
 		
 	</body>
 </html>
