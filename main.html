@@ -18,50 +18,70 @@
 		<!-- Header -->
 			<header>
 				<div>
+					<br>
 					<h1>Instagram Downloader</h1>
 					<p id="preface">Just a simple Instagram picture downloader<br />
 					by Khlemant</p>
 					</br>
 					<p id="presentation">Welcome to this Instagram picture downloader.</br>
-					You just have to put the link in the box, and click download picture.</p>
+					You just have to put the link in the box, and click open picture.</p>
 					<br/>
 				</div>
 			</header>
 			
 		<!-- Main body-->
 			<div id="mainbody">
-				<h2>Enter the link here :</h2>
-
+				<h2>Enter the publication link :</h2>
 				<form>
 				<label for="inputlink"></label>
-  				<input type="text" id="text" placeholder="Paste the link here" size="100" />
+  				<input type="text" id="text" placeholder="Paste the link here" size= 50/>
 				<br>
-				<input type="button" id="btn" value="Download" />
+				<br>
+				<label for="buttondownload">Then click the button. A new page will be oppened, just right click, then click "Save image as"</label>
+				<br>
+				<input type="button" id="btn"onclick="openlink()" value="Open picture" />
 				<br>
 				<!--Script-->
 					<script>
 
+						function openlink(){
+							var obj = document.getElementById("text").value;
+							var c = document.getElementById("idcheckbox").checked;
+							if (c == true){
+							window.open(obj+'media/?size=l');
+							}
+							else
+							{
+								window.alert("Please check the box before downloading anything.");
+							}
+						}
+						/*
 						function download(filename, textInput){
 							var element = document.createElement('a');
 							element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
 							element.setAttribute('download', filename);
+
+							element.style.display = "none";
 							document.body.appendChild(element);
+
 							element.click();
-							//document.body.removeChild(element);
+
+							document.body.removeChild(element);
 						}
-						document.getElementById("btn")
-							.addEventListener("click",function(){
+						document.getElementById("btn").addEventListener("click",function(){
 								var text = document.getElementById("text").value;
 								var filename = "output.html";
 								var c = document.getElementById("idcheckbox").checked;
 								if (c == true){
-								download(filename, text);
+								download(filename, text+"media/?siez=l");
 								}
 								else
 								{
 									window.alert("Please check the box before downloading anything.");
 								}
 							}, false);
+							*/
+
 					</script>
 
 				<label for="checkbox">By checking this box, you agree to download the image and use it in accordance with the laws.</label>

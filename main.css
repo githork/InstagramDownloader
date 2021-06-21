@@ -28,6 +28,10 @@ h2 {
     text-align: center;
 }
 
+#text{
+    size:100%;
+}
+
 .stop {
     text-align: center;
     font-style: italic;
