@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="main.css" />
+		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 		<!--Background-->
@@ -41,59 +42,11 @@
 				<br>
 				<input type="button" id="btn"onclick="openlink()" value="Open picture" />
 				<br>
-				<!--Script-->
-					<script>
-
-						function openlink(){
-							var obj = document.getElementById("text").value;
-							var c = document.getElementById("idcheckbox").checked;
-							if (c == true){
-							window.open(obj+'media/?size=l');
-							}
-							else
-							{
-								window.alert("Please check the box before downloading anything.");
-							}
-						}
-						/*
-						function download(filename, textInput){
-							var element = document.createElement('a');
-							element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
-							element.setAttribute('download', filename);
-
-							element.style.display = "none";
-							document.body.appendChild(element);
-
-							element.click();
-
-							document.body.removeChild(element);
-						}
-						document.getElementById("btn").addEventListener("click",function(){
-								var text = document.getElementById("text").value;
-								var filename = "output.html";
-								var c = document.getElementById("idcheckbox").checked;
-								if (c == true){
-								download(filename, text+"media/?siez=l");
-								}
-								else
-								{
-									window.alert("Please check the box before downloading anything.");
-								}
-							}, false);
-							*/
-
-					</script>
-
 				<label for="checkbox">By checking this box, you agree to download the image and use it in accordance with the laws.</label>
 				<input type="checkbox" id="idcheckbox" name="checkbox" required>
 				</form>
-
-
-
-
-
-
 			</div>
+			
 		<!--More informations-->
 			<div class="stop">
 				<br><br>
