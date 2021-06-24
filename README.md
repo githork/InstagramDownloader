@@ -1,6 +1,6 @@
 # InstagramDownloader
 ___________
-Projet personnel permettant de télécharger une publication Instagram avec le lien de cette publication.
+Personal projet used to download Instagram post with associated link.
 
 All rights reserved to Clément EHINGER.
 No commercial uses.
