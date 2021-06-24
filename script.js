@@ -35,3 +35,7 @@ document.getElementById("btn").addEventListener("click",function(){
         }
     }, false);
     */
+
+    /* TODO : Automatiser le CTRL +S */
+
+    
